@@ -10,14 +10,25 @@
 // 1. Fibonacci
 // Define function: fib(n)
 // Return the nth number in the fibonacci sequence.
+function fib(n) {
+    let a = 1;
+    let b = 0;
+    let temp = 0;
 
+    while(n>=0) {
+        temp = a;
+        a = a + b;
+        b = temp;
+        n--;
+    }
+    return b;
+}
 
 
 // 2. Bubble Sort
 // Define function: bubbleSort(numArray)
 // Use the bubble sort algorithm to sort the array.
 // Return the sorted array.
-
 
 
 // 3. Reverse String
