@@ -99,6 +99,16 @@ function substring(someStr, length, offset) {
 // Return true if even, false if odd.
 // Do not use % operator.
 
+function isEven(someNum) {
+    let t = "";
+    t = t.concat(someNum);
+    let e = t.charAt(t.length-1);
+    if(e == 1 || e == 3 || e == 5 || e == 7 || e == 9) {
+        return false;
+    } else {
+        return true;
+    }
+}
 
 // 7. Palindrome
 // Define function isPalindrome(someStr)
