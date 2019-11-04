@@ -75,7 +75,24 @@ function factorial(someNum) {
 // Return the substring contained between offset and (offset + length) inclusively.
 // If incorrect input is entered, use the alert function and describe why the input was incorrect.
 
-
+function substring(someStr, length, offset) {
+    if(typeof(someStr) != "string" ) {
+        alert("Please put a string as the first parameter");
+    }
+    if(typeof(length) != "number" || length < 0) {
+        alert("Please put a positive number in the length parameter");
+    }
+    if(typeof(offset)!= "number" || offset > someStr.length) {
+        alert("Please put a number that is less than the legnth of the string in the offset parameter");
+    }
+    let start = offset;
+    let end = offset + length;
+    let output = "";
+    for(let i = start; i <= end ; i++) {
+        output = output.concat(someStr.charAt(i)); 
+    } 
+    return output;
+}
 
 // 6. Even Number
 // Define function: isEven(someNum)
