@@ -16,7 +16,7 @@ function fib(n) {
     let b = 0;
     let temp = 0;
 
-    while(n>=0) {
+    while (n >= 0) {
         temp = a;
         a = a + b;
         b = temp;
@@ -32,16 +32,16 @@ function fib(n) {
 
 function bubbleSort(numArray) {
     for (let i = 0; i < numArray.length; i++) {
-        for (let j = 1; j < numArray.length-1; j++) {
+        for (let j = 1; j < numArray.length - 1; j++) {
             let a = numArray[i];
             let b = numArray[j];
-            if(a > b) {
+            if (a > b) {
                 numArray[i] = b;
                 numArray[j] = a;
-            } 
-        }   
+            }
+        }
     }
-    return numArray; 
+    return numArray;
 }
 
 // 3. Reverse String
@@ -59,13 +59,13 @@ function reverseStr(someStr) {
 // 4. Factorial
 // Define function: factorial(someNum)
 // Use recursion to compute and return the factorial of someNum.
-function factorial(someNum) { 
-    if(someNum<=0) {
+function factorial(someNum) {
+    if (someNum <= 0) {
         return 0;
     } else if (someNum == 1) {
         return 1;
     } else {
-        return someNum * factorial(someNum-1);
+        return someNum * factorial(someNum - 1);
     }
 }
 
@@ -76,21 +76,21 @@ function factorial(someNum) {
 // If incorrect input is entered, use the alert function and describe why the input was incorrect.
 
 function substring(someStr, length, offset) {
-    if(typeof(someStr) != "string" ) {
+    if (typeof (someStr) != "string") {
         alert("Please put a string as the first parameter");
     }
-    if(typeof(length) != "number" || length < 0) {
+    if (typeof (length) != "number" || length < 0) {
         alert("Please put a positive number in the length parameter");
     }
-    if(typeof(offset)!= "number" || offset > someStr.length) {
+    if (typeof (offset) != "number" || offset > someStr.length) {
         alert("Please put a number that is less than the legnth of the string in the offset parameter");
     }
     let start = offset;
     let end = offset + length;
     let output = "";
-    for(let i = start; i <= end ; i++) {
-        output = output.concat(someStr.charAt(i)); 
-    } 
+    for (let i = start; i <= end; i++) {
+        output = output.concat(someStr.charAt(i));
+    }
     return output;
 }
 
@@ -102,8 +102,8 @@ function substring(someStr, length, offset) {
 function isEven(someNum) {
     let t = "";
     t = t.concat(someNum);
-    let e = t.charAt(t.length-1);
-    if(e == 1 || e == 3 || e == 5 || e == 7 || e == 9) {
+    let e = t.charAt(t.length - 1);
+    if (e == 1 || e == 3 || e == 5 || e == 7 || e == 9) {
         return false;
     } else {
         return true;
@@ -114,6 +114,32 @@ function isEven(someNum) {
 // Define function isPalindrome(someStr)
 // Return true if someStr is a palindrome, otherwise return false
 
+function isPalindrome(someStr) {
+    let one = "";
+    let two = "";
+    if (isEven(someStr.length) == true) {
+        let half = someStr.length / 2;
+        for (let index = 0; index < half; index++) {
+            one = one.concat(someStr.charAt(index));
+        }
+        for (let index = someStr.length - 1; index >= half; index--) {
+            two = two.concat(someStr.charAt(index));
+        }
+    } else {
+        let half = Math.floor(someStr.length / 2);
+        for (let index = 0; index < half+1; index++) {
+            one = one.concat(someStr.charAt(index));    
+        }
+        for (let index = someStr.length-1; index >= half; index--) {
+            two = two.concat(someStr.charAt(index));
+        }
+    }
+    if (one === two) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 // 8. Shapes
 // Define function: printShape(shape, height, character)
