@@ -29,6 +29,19 @@ function fib(n) {
 // Define function: bubbleSort(numArray)
 // Use the bubble sort algorithm to sort the array.
 // Return the sorted array.
+function bubbleSort(numArray) {
+    for (let i = 0; i < numArray.length; i++) {
+        for (let j = 1; j < numArray.length-1; j++) {
+            let a = numArray[i];
+            let b = numArray[j];
+            if(a > b) {
+                numArray[i] = b;
+                numArray[j] = a;
+            } 
+        }   
+    }
+    return numArray; 
+}
 
 
 // 3. Reverse String
