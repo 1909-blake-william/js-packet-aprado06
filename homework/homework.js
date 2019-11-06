@@ -164,13 +164,20 @@ function isPalindrome(someStr) {
 //   *
 
 function printShape(shape, height, character) { 
+    let chars = '';
     if(shape === "Square") {
-        let i = height;
-            for (let i = 0; i < height; i++) {
-                for (let j = 0; j < height; j++) {
-                    console.log(character);
-                }    
-            }
+        for (let i = 0; i < height; i++) {
+            chars += character;
+        }    
+        for (let j = 0; j < height; j++) {
+            console.log(chars);
+        }    
+            
+    } else if (shape == "Triangle") {
+        for (let i = 0; i < height; i++) {
+            chars += character;
+            console.log(chars);
+        }
     }
 }
 
@@ -206,7 +213,7 @@ function deleteElement(someArr) {
 function spliceElement(someArr) {
     let arr = someArr;
     console.log(arr.length);
-    someArr.splice(2);
+    someArr.splice(2,1);
     console.log(arr.length);
 }
 

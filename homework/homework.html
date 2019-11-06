@@ -104,7 +104,8 @@
     // Find the html element that contains "USA" in the data-customAttr.
     // Print that element's contents.
     function getUSA () {
-      const el = document.getElement 
+      const elem = document.querySelector(`[data-customAttr="USA"]`);
+      console.log(elem.innerText); 
     }
  
     // 2. Sales
