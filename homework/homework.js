@@ -163,11 +163,25 @@ function isPalindrome(someStr) {
 //  ***
 //   *
 
+function printShape(shape, height, character) { 
+    if(shape === "Square") {
+        let i = height;
+            for (let i = 0; i < height; i++) {
+                for (let j = 0; j < height; j++) {
+                    console.log(character);
+                }    
+            }
+    }
+}
+
+
 
 // 9. Object literal
 // Define function traverseObject(someObj)
 // Print every property and it's value.
-
+function traverseObject(someObj) {
+    console.log(someObj);
+}
 
 // 10. Delete Element
 // Define function deleteElement(someArr)
@@ -195,4 +209,3 @@ function isPalindrome(someStr) {
 // Define function getPerson(name, age)
 // The following line should set a Person object to the variable john:
 // 	let john = getPerson("John", 30);
-
