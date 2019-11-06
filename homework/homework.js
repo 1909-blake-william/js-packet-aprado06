@@ -224,3 +224,11 @@ function Person(name, age) {
 // Define function getPerson(name, age)
 // The following line should set a Person object to the variable john:
 // 	let john = getPerson("John", 30);
+
+function getPerson(name, age) {
+    name = {
+        name,
+        age
+    }  
+    return name;  
+}
