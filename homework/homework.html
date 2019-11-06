@@ -111,7 +111,14 @@
     // 2. Sales
     // Define function getPeopleInSales()
     // Print the names of all the people in the sales department.
-
+    function getPeopleInSales() {
+      let people = document.getElementsByClassName("empName")
+      for (let i = 0; i < people.length; i++) {
+        if(people[i].nextElementSibling.innerText === 'Sales') {
+          console.log(people[i].innerText);
+        }
+      }
+    }
 
     // 3. Click Here
     // Define function getAnchorChildren()
