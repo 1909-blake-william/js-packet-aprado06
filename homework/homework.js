@@ -215,6 +215,10 @@ function spliceElement(someArr) {
 // The following line should set a Person object to the variable john:
 // 	let john = new Person("John", 30);
 
+function Person(name, age) {
+    this.name = name,
+    this.age = age
+}
 
 // 13. Defining an object using an object literal
 // Define function getPerson(name, age)
