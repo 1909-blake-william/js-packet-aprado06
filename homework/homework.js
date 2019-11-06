@@ -203,6 +203,12 @@ function deleteElement(someArr) {
 // Print length
 // The lengths should be one less than the original length.
 
+function spliceElement(someArr) {
+    let arr = someArr;
+    console.log(arr.length);
+    someArr.splice(2);
+    console.log(arr.length);
+}
 
 // 12. Defining an object using a constructor
 // Define a function Person(name, age)
