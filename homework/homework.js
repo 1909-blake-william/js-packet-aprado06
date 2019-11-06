@@ -190,6 +190,11 @@ function traverseObject(someObj) {
 // Print length
 // The lengths should be the same.
 
+function deleteElement(someArr) {
+    console.log(someArr.length);
+    delete someArr[2];
+    console.log(someArr.length); 
+}
 
 // 11. Splice Element
 // Define function spliceElement(someArr)
