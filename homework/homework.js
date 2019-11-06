@@ -32,12 +32,12 @@ function fib(n) {
 
 function bubbleSort(numArray) {
     for (let i = 0; i < numArray.length; i++) {
-        for (let j = 1; j < numArray.length - 1; j++) {
-            let a = numArray[i];
-            let b = numArray[j];
+        for (let j = 0; j < numArray.length - 1; j++) {
+            let a = numArray[j];
+            let b = numArray[j+1];
             if (a > b) {
-                numArray[i] = b;
-                numArray[j] = a;
+                numArray[j] = b;
+                numArray[j+1] = a;
             }
         }
     }
