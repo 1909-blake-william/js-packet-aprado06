@@ -124,7 +124,16 @@
     // Define function getAnchorChildren()
     // Find all anchor elements with a <span> child.
     // Print the contents of <span>
-
+    function getAnchorChildren() {
+      let anchor = document.getElementsByTagName('a');
+      let span;
+      for (let index = 0; index < anchor.length; index++) {
+        span = anchor[index].getElementsByTagName('span');
+        for (const iterator of anchor) {
+          console.log(span); 
+        }
+      }
+    }  
 
     // 4. Hobbies
     // Define function getHobbies()
