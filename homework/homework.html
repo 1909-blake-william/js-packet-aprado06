@@ -215,7 +215,19 @@
     // Regarding this element:
     // 	<p id="helloWorld">Hello, World!</p>
     // Three seconds after a user clicks on this element, change the text to a random color.
+    let elem = document.getElementById("helloWorld");
+    elem.addEventListener('click', () => {
+      setTimeout(randomColor,3000);  
+    })
 
+    function randomColor() {
+      let hW = document.getElementById("helloWorld");
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      let rgb = `rgb(${r},${g},${b})`;
+      hW.style.color = rgb;
+    }
 
     // 12. Walk the DOM
     // Define function walkTheDOM(node, func)
