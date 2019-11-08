@@ -142,13 +142,12 @@
     // Find all checked options in the 'skills' select element.
     // Print the value and the contents.
     function getHobbies() {
-      let skill = document.getElementsByName('skills');
+      let skill = document.querySelectorAll('select[name="skills"] option[selected="selected"]');
       for (let i = 0; i < skill.length; i++) {
         console.log(`skill value: ${skill[i].value}, skill content: ${skill[i].innerText}`);
-
       }
     }
-
+    
     // 5. Custom Attribute
     // Define function getCustomAttribute()
     // Find all elements with "data-customAttr" attribute
