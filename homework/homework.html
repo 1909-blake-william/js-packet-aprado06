@@ -204,7 +204,20 @@
     // 	"So you like green more than blue now?"
     // In this example, green is the new value and blue is the old value.
     // Make the background color (of all favoriteColor radio buttons) the newly selected favoriteColor
-
+    let colors = document.getElementsByName('favoriteColor');
+    let prevColor;
+    for (let i = 0; i < colors.length; i++) {
+      colors[i].addEventListener('change', event => {
+        let color = event.target.value;
+        if(prevColor !== color) {
+          alert(`you like ${color} more than ${prevColor} now`);
+          prevColor = color;
+        } else {
+          alert(`you like ${prevColor}`);
+          prevColor = color;
+        }
+      })
+    }  
 
     // 9. Show/Hide Event
     // When user hovers over an employees name:
