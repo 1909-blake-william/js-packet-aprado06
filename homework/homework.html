@@ -147,7 +147,7 @@
         console.log(`skill value: ${skill[i].value}, skill content: ${skill[i].innerText}`);
       }
     }
-    
+
     // 5. Custom Attribute
     // Define function getCustomAttribute()
     // Find all elements with "data-customAttr" attribute
@@ -208,7 +208,36 @@
     // 	<h5 id="currentTime"></h5>
     // Show the current time in this element in this format: 9:05:23 AM
     // The time should be accurate to the second without having to reload the page.
+    function time () {
+      let today = new Date();
+      let hour = today.getHours();
+      let minute = today.getMinutes();
+      let second = today.getSeconds();
+      hour = addZero(hour);
+      minute = addZero(minute);
+      second = addZero(second);
+      if(hour > 12) {
+        document.getElementById('currentTime').innerHTML = `${hour}:${minute}:${second} PM`
+        setInterval(() => {
+          time()
+        }, 500);
+      } else {
+        document.getElementById('currentTime').innerHTML = `${hour}:${minute}:${second} AM`
+        setInterval(() => {
+          time()
+        }, 500);
+      }
+    }
 
+    time();
+
+    function addZero (t) {
+      if(t<10) {
+        t = "0" + t;
+      }
+      return t;
+    }
+    
 
     // 11. Delay
     // Regarding this element:
