@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
 
-<title>DOM</title>
+<head>
+  <meta charset="ISO-8859-1">
+
+  <title>DOM</title>
 </head>
+
 <body>
 
   <div>
@@ -19,13 +21,13 @@
       <a>Click <span>Here1</span></a>
       <a>Click Here</a>
       <div>
-	  <select name="colors">
-	    <option value="green">Green</option>
-	    <option value="blue">Blue</option>
-	    <option value="red" selected="selected">Red</option>
-	    <option value="purple">Purple</option>
-	    <option value="yellow" selected="selected">Yellow</option>
-	  </select>
+        <select name="colors">
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+          <option value="red" selected="selected">Red</option>
+          <option value="purple">Purple</option>
+          <option value="yellow" selected="selected">Yellow</option>
+        </select>
       </div>
     </div>
     <p id="helloWorld">Hello, World!</p>
@@ -63,35 +65,35 @@
     </div>
     <form id="firstForm">
       <a>Click <span>Here2</span></a>
-	  <input type="text" data-customAttr="7"/><br/>
-	  <input type="text" data-customAttr="24"/><br/>
-	  <input type="radio" name="favoriteAnimal" value="dog"/>Dog<br/>
-	  <input type="radio" name="favoriteColor" value="blue"/>Blue<br/>
-	  <input id="num1" class="nums" type="text"/><br/>
-	  <input type="radio" name="favoriteAnimal" value="cat"/>Cat<br/>
-	  <input type="radio" name="favoriteColor" value="red"/>Red<br/>
-	  <input type="radio" name="favoriteAnimal" value="horse"/>Horse<br/>
-	  <input type="radio" name="favoriteAnimal" value="dolphin"/>Dolphin<br/>
-	  <a>Click <span>Here</span></a><br/>
-	  <input type="radio" name="favoriteAnimal" value="eagle"/>Eagle<br/>
-	  <input type="radio" name="favoriteColor" value="green"/>Green<br/>
-	  <input type="radio" name="favoriteColor" value="orange"/>Orange<br/>
-	  <select name="hobbies">
-	    <option value="photography">Photography</option>
-	    <option value="football" selected="selected">Football</option>
-	    <option value="kayaking" selected="selected">Kayaking</option>
-	    <option value="hiking">Hiking</option>
-	    <option value="programming" selected="selected">Programming</option>
-	  </select>
-	  <input id="num2" class="nums" type="text"/>
-	  <select name="skills">
-	    <option value="java">Java</option>
-	    <option value="net">.NET</option>
-	    <option value="dom" selected="selected">DOM</option>
-	    <option value="html">HTML</option>
-	    <option value="css">CSS</option>
-	    <option value="javascript" selected="selected">Javascript</option>
-	  </select>
+      <input type="text" data-customAttr="7" /><br />
+      <input type="text" data-customAttr="24" /><br />
+      <input type="radio" name="favoriteAnimal" value="dog" />Dog<br />
+      <input type="radio" name="favoriteColor" value="blue" />Blue<br />
+      <input id="num1" class="nums" type="text" /><br />
+      <input type="radio" name="favoriteAnimal" value="cat" />Cat<br />
+      <input type="radio" name="favoriteColor" value="red" />Red<br />
+      <input type="radio" name="favoriteAnimal" value="horse" />Horse<br />
+      <input type="radio" name="favoriteAnimal" value="dolphin" />Dolphin<br />
+      <a>Click <span>Here</span></a><br />
+      <input type="radio" name="favoriteAnimal" value="eagle" />Eagle<br />
+      <input type="radio" name="favoriteColor" value="green" />Green<br />
+      <input type="radio" name="favoriteColor" value="orange" />Orange<br />
+      <select name="hobbies">
+        <option value="photography">Photography</option>
+        <option value="football" selected="selected">Football</option>
+        <option value="kayaking" selected="selected">Kayaking</option>
+        <option value="hiking">Hiking</option>
+        <option value="programming" selected="selected">Programming</option>
+      </select>
+      <input id="num2" class="nums" type="text" />
+      <select name="skills">
+        <option value="java">Java</option>
+        <option value="net">.NET</option>
+        <option value="dom" selected="selected">DOM</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript" selected="selected">Javascript</option>
+      </select>
     </form>
   </div>
   <a>Click Here</a>
@@ -103,18 +105,18 @@
     // Define function getUSA()
     // Find the html element that contains "USA" in the data-customAttr.
     // Print that element's contents.
-    function getUSA () {
+    function getUSA() {
       const elem = document.querySelector(`[data-customAttr="USA"]`);
-      console.log(elem.innerText); 
+      console.log(elem.innerText);
     }
- 
+
     // 2. Sales
     // Define function getPeopleInSales()
     // Print the names of all the people in the sales department.
     function getPeopleInSales() {
       let people = document.getElementsByClassName("empName")
       for (let i = 0; i < people.length; i++) {
-        if(people[i].nextElementSibling.innerText === 'Sales') {
+        if (people[i].nextElementSibling.innerText === 'Sales') {
           console.log(people[i].innerText);
         }
       }
@@ -130,10 +132,10 @@
       for (let index = 0; index < anchor.length; index++) {
         span = anchor[index].getElementsByTagName('span');
         for (const iterator of anchor) {
-          console.log(span); 
+          console.log(span);
         }
       }
-    }  
+    }
 
     // 4. Hobbies
     // Define function getHobbies()
@@ -143,7 +145,7 @@
       let skill = document.getElementsByName('skills');
       for (let i = 0; i < skill.length; i++) {
         console.log(`skill value: ${skill[i].value}, skill content: ${skill[i].innerText}`);
-        
+
       }
     }
 
@@ -157,10 +159,10 @@
       for (let i = 0; i < attr.length; i++) {
         console.log(`Element the attribute is in: ${attr[i].tagName}`);
         console.log(`Attribute value: ${attr[i].getAttribute('data-customAttr')}`);
-        
+
       }
     }
-    
+
     // 6. Sum Event
     // Regarding these elements:
     // 	<input id="num1" class="nums" type="text"/>
@@ -170,7 +172,7 @@
     // Add <input> element values.
     // Put the sum in the <span> element.
     // If values cannot be added, put "Cannot add" in the <span> element
-    
+
 
     // 7. Skills Event
     // When user selects a skill, create an alert with a message similar to:
@@ -191,7 +193,16 @@
     // When user hovers over an employees name:
     // 	Hide the name if shown.
     // 	Show the name if hidden.
-
+    let names = document.getElementsByClassName('empName');
+    for (let i = 0; i < names.length; i++) {
+      names[i].addEventListener('mouseover', event => {
+        if (event.target.style.color !== 'black') {
+          event.target.style.color = 'black';
+        } else {
+          event.target.style.color = 'white'
+        }
+      })
+    }
 
     // 10. Current Time
     // Regarding this element:
@@ -213,4 +224,5 @@
   </script>
 
 </body>
+
 </html>
