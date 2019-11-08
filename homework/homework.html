@@ -171,6 +171,24 @@
     // Add <input> element values.
     // Put the sum in the <span> element.
     // If values cannot be added, put "Cannot add" in the <span> element
+    let elem1 = document.getElementById('num1');
+    let elem2 = document.getElementById('num2');
+    let sum = document.getElementById('sum');
+
+    elem1.addEventListener('input',add);
+    elem2.addEventListener('input',add);
+
+    function add() {
+      let one = Number(elem1.value);
+      let two = Number(elem2.value);
+      if(one && two) {
+        let total = one + two; 
+        sum.innerText = `${elem1.value}+${elem2.value}=${total}` 
+      } else {
+        sum.innerText = 'Cannot add'
+      }
+
+    }
 
 
     // 7. Skills Event
